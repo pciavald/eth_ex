@@ -24,6 +24,7 @@
     "mocha": "^2.2.5",
     "express": "^4.12.3",
     "read-yaml": "^1.0.0",
-    "compression": "^1.4.3"
+    "compression": "^1.4.3",
+	"web3": "0.13.0"
   }
 }

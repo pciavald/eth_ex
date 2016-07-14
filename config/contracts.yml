@@ -1,8 +1,0 @@
-development:
-  Orders:
-    args:
-      - 100
-staging:
-  Orders:
-    args:
-      - 100
