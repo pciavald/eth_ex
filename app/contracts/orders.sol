@@ -3,6 +3,11 @@ contract Orders {
 	uint public orders;
 	uint public transit;
 
+    modifier atLeast(uint amount) {
+        if (amount <= orders) throw;
+        _
+    }
+
 	function Orders() {
 		orders = 0;
 		transit = 0;
@@ -20,20 +25,14 @@ contract Orders {
 		return (transit);
 	}
 
-	function inTransit (uint amount) {
-		if (amount <= orders) {
+	function inTransit (uint amount) atLeast(amount) returns (bool success){
 			orders -= amount;
 			transit += amount;
-		}
-		else
-			throw ;
+			return true;
 	}
 
-	function delivered (uint amount) {
-		if (amount <= transit) {
+	function delivered (uint amount) atLeast(amount) returns (bool success) {
 			transit -= amount;
-		}
-		else
-			throw ;
+	        return true;
 	}
 }
