@@ -8,6 +8,6 @@ sudo apt-get autoremove --purge -y
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.7/install.sh | bash
 source ~/.bashrc
 nvm install 5
-sudo npm install -g grunt-cli embark-framework ethereumjs-testrpc
+sudo npm install -g grunt-cli embark-framework ethersim ethereumjs-testrpc
 testrpc --port 8101
 embark run
